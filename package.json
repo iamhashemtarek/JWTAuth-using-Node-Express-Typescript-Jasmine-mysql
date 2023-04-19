@@ -1,16 +1,30 @@
 {
-  "name": "JWTAuth-using-Node-Express-Typescript-Jasmine-mysql",
+  "name": "jwt-app",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:iamhashemtarek/JWTAuth-using-Node-Express-Typescript-Jasmine-mysql.git",
   "author": "iamhashemtarek <hashemtarek2012@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ./src/index.ts",
+    "build": "tsc",
+    "start": "npm run build && node ./dist/index.js",
+    "test": "npm run build && jasmine"
+  },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
+    "@types/jasmine": "^4.3.1",
+    "@types/morgan": "^1.9.4",
     "@types/node": "^18.15.11",
+    "@types/supertest": "^2.0.12",
+    "jasmine": "^4.6.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "morgan": "^1.10.0",
+    "supertest": "^6.3.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   }
