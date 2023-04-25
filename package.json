@@ -9,9 +9,12 @@
     "dev": "nodemon ./src/index.ts",
     "build": "tsc",
     "start": "npm run build && node ./dist/index.js",
-    "test": "npm run build && jasmine"
+    "test": "npm run build && jasmine",
+    "migration:run": "npx db-migrate up"
   },
   "dependencies": {
+    "db-migrate": "^0.11.13",
+    "db-migrate-mysql": "^2.2.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mysql2": "^3.2.3"

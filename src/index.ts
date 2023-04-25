@@ -14,7 +14,7 @@ const app: Application = express();
 //middleware
 app.use(express.json()); //parsing req body
 app.use(morgan("dev"));
-if (process.env.NODE_ENV == "development") { //logging http requests
+if (process.env.NODE_ENV == "dev") { //logging http requests
 }
 
 //routes
