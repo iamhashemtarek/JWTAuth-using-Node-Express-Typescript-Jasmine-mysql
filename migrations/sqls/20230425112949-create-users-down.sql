@@ -1,2 +1,2 @@
 /* Replace with your SQL commands */
-drop table if exists users;
+drop table users;
