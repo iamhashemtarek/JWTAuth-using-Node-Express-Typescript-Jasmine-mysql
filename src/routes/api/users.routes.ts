@@ -1,9 +1,14 @@
-import {Router} from 'express'
-import * as usersController from '../../controllers/users.controllers'
+import { Router } from "express";
+import * as usersController from "../../controllers/users.controllers";
 
-const router  = Router();
+const router = Router();
 
-router.route('/').post(usersController.create)
+router.route("/").get(usersController.getMany).post(usersController.create);
 
-export default  router;
+router
+  .route("/:id")
+  .get(usersController.getOne)
+  .put(usersController.updateOne)
+  .delete(usersController.deleteOne);
 
+export default router;
